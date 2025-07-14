@@ -1,7 +1,7 @@
 const baseURL = import.meta.env.VITE_OLLAMA_URL;
 export async function getPoeticReflection(userPrompt, mood = "gentle") {
   try {
-    const response = await fetch("https://dull-crabs-hug.loca.lt", {
+   const response = await fetch(`${baseURL}/api/generate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
