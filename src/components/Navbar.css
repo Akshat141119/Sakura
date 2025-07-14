@@ -1,0 +1,59 @@
+/* 🌸 Petal Navbar Container */
+.petal-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background: linear-gradient(to right, #ffeaf4, #e0f7fa);
+  padding: 14px 0;
+  border-radius: 0 0 20px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  animation: fadeSlide 0.6s ease forwards;
+}
+
+/* 🌿 Each Navbar Link */
+.petal-navbar a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/* 🍃 Hover Effects */
+.petal-navbar a:hover {
+  background-color: rgba(255, 182, 193, 0.25);
+  color: #d81b60;
+}
+
+/* 🔮 Active Page Highlight */
+.petal-navbar a.active {
+  background-color: #f8bbd0;
+  color: white;
+  box-shadow: 0 2px 10px rgba(216, 27, 96, 0.3);
+}
+
+/* 🌸 Petal Dot Under Active Link */
+.petal-navbar a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #d81b60;
+  border-radius: 50%;
+}
+
+/* ✨ Fade-in Animation */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

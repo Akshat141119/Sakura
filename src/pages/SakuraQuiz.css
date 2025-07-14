@@ -1,0 +1,358 @@
+.quiz-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  text-align: center;
+  animation: fadeInCanvas 1s ease-out;
+}
+
+.quiz-question {
+  font-size: 1.8rem;
+  color: #b03060;
+  margin-bottom: 1.8rem;
+  font-weight: 600;
+  animation: fadeInSakura 1s ease;
+}
+.quiz-textarea {
+  width: 100%;
+  max-width: 520px;
+  min-height: 100px;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid #f9d5e5;
+  resize: vertical;
+  background: #fff7fa;
+  color: #5c374c;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(255, 180, 200, 0.2);
+  margin-bottom: 1.2rem;
+  transition: border 0.3s ease;
+}
+
+.quiz-textarea:focus {
+  outline: none;
+  border-color: #c71585;
+}
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.quiz-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #fbe3ee;
+  color: #5c374c;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(249, 213, 229, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.quiz-btn:hover {
+  background-color: #c71585;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 2px 12px rgba(199, 21, 133, 0.4);
+}
+
+.quiz-btn:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.quiz-result {
+  max-width: 640px;
+  background: #fff0f6;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  border-left: 4px solid #e8a4c7;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(223, 160, 193, 0.2);
+  opacity: 0;
+  animation: fadeInSakura 1.2s ease-out forwards;
+}
+
+.quiz-result p {
+  font-size: 1.25rem;
+  color: #6b3a4b;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+/* 🌸 Layout Container */
+.quiz-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  text-align: center;
+  animation: fadeInCanvas 1s ease-out;
+}
+
+/* ✍️ Poetic Question */
+.quiz-question {
+  font-size: 1.8rem;
+  color: #b03060;
+  margin-bottom: 1.8rem;
+  font-weight: 600;
+  animation: fadeInSakura 1s ease;
+  max-width: 680px;
+  line-height: 1.4;
+}
+
+/* 📝 Response Input */
+.quiz-textarea {
+  width: 100%;
+  max-width: 520px;
+  min-height: 100px;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid #f9d5e5;
+  resize: vertical;
+  background: #fff7fa;
+  color: #5c374c;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(255, 180, 200, 0.2);
+  margin-bottom: 1.2rem;
+  transition: border 0.3s ease;
+}
+
+.quiz-textarea:focus {
+  outline: none;
+  border-color: #c71585;
+}
+
+/* 🔘 Button */
+.quiz-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #fbe3ee;
+  color: #5c374c;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(249, 213, 229, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.quiz-btn:hover {
+  background-color: #c71585;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 2px 12px rgba(199, 21, 133, 0.4);
+}
+
+.quiz-btn:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.quiz-btn.animate-petal {
+  animation: pulsePetal 1.8s ease-in-out infinite;
+}
+
+/* 🌸 Poetic Feedback */
+.quiz-result {
+  max-width: 640px;
+  background: #fff0f6;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  border-left: 4px solid #e8a4c7;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(223, 160, 193, 0.2);
+  opacity: 0;
+  animation: fadeInSakura 1.2s ease-out forwards;
+}
+
+@keyframes fadeInSakura {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.quiz-result p {
+  font-size: 1.25rem;
+  color: #6b3a4b;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 🎭 Animations */
+@keyframes fadeInSakura {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInCanvas {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeInSakura {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInCanvas {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.quiz-btn {
+  /* existing styles… */
+  position: relative;
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.quiz-btn.animate-petal {
+  animation: pulsePetal 1.8s ease-in-out infinite;
+}
+
+@keyframes pulsePetal {
+  0% { transform: scale(1); box-shadow: 0 0 8px rgba(248, 192, 224, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 12px rgba(248, 192, 224, 0.6); }
+  100% { transform: scale(1); box-shadow: 0 0 8px rgba(248, 192, 224, 0.4); }
+}
+/* 🌸 Petal visuals during voice playback */
+.petal-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.sakura-petal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url('/images/Sakura_petals.png') no-repeat center;
+  background-size: contain;
+  animation: floatPetal 6s infinite linear;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sakura1 { left: 10%; top: -20px; animation-delay: 0s; }
+.sakura2 { left: 50%; top: -20px; animation-delay: 1s; }
+.sakura3 { left: 80%; top: -20px; animation-delay: 2s; }
+
+@keyframes floatPetal {
+  0%   { transform: translateY(0) rotate(0deg);   opacity: 0.8; }
+  50%  { transform: translateY(200px) rotate(180deg); opacity: 0.4; }
+  100% { transform: translateY(400px) rotate(360deg); opacity: 0; }
+}
+
+/* 🔊 Sound wave animation */
+.sound-wave {
+  width: 100px;
+  height: 20px;
+  margin: 12px auto;
+  background: radial-gradient(circle at center, #f2a7c2, #fff0f6);
+  animation: pulseWave 1.4s infinite ease-in-out;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+@keyframes pulseWave {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  50%  { transform: scale(1.2); opacity: 1;   }
+  100% { transform: scale(1);   opacity: 0.8; }
+}
+/* 🌸 Shared Petal & Wave Base */
+.petal-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.sakura-petal {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 🌬️ Gentle Mood */
+.gentle .sakura-petal {
+  background-image: url('/images/petal_gentle.png');
+  animation: floatPetalGentle 8s infinite ease-in-out;
+}
+@keyframes floatPetalGentle {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+  50%  { transform: translateY(150px) rotate(180deg); opacity: 0.4; }
+  100% { transform: translateY(300px) rotate(360deg); opacity: 0.2; }
+}
+
+/* ❤️ Romantic Mood */
+.romantic .sakura-petal {
+  background-image: url('/images/petal_romantic.png');
+  animation: shimmerPetal 6s infinite ease-in-out;
+}
+@keyframes shimmerPetal {
+  0%   { transform: scale(1) rotate(0deg); opacity: 0.6; }
+  50%  { transform: scale(1.1) rotate(180deg); opacity: 0.9; }
+  100% { transform: scale(1) rotate(360deg); opacity: 0.6; }
+}
+
+/* 🌑 Dramatic Mood */
+.dramatic .sakura-petal {
+  background-image: url('/images/petal_dark.png');
+  animation: fallPetalSlow 10s infinite linear;
+}
+@keyframes fallPetalSlow {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+  50%  { transform: translateY(200px) rotate(180deg); opacity: 0.5; }
+  100% { transform: translateY(500px) rotate(360deg); opacity: 0.3; }
+}
+
+/* 🔊 Sound wave variations */
+.sound-wave {
+  width: 100px;
+  height: 20px;
+  margin: 12px auto;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.gentle .sound-wave {
+  background: radial-gradient(circle, #f9cfe8, #fff4f7);
+  animation: pulseWaveGentle 1.6s infinite ease-in-out;
+}
+@keyframes pulseWaveGentle {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50%      { transform: scale(1.1); opacity: 0.95; }
+}
+
+.romantic .sound-wave {
+  background: radial-gradient(circle, #f5a4d4, #fcd6ec);
+  animation: pulseWaveRomantic 1.2s infinite ease-in-out;
+}
+@keyframes pulseWaveRomantic {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.3); }
+}
+
+.dramatic .sound-wave {
+  background: radial-gradient(circle, #933d71, #2a1e25);
+  animation: pulseWaveDramatic 1.8s infinite ease-in-out;
+}
+@keyframes pulseWaveDramatic {
+  0%   { transform: scale(1); opacity: 0.6; }
+  50%  { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.6; }
+}

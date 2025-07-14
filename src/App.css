@@ -1,0 +1,82 @@
+/* Navbar blur and soft blossom tint */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 228, 225, 0.8);
+  border-bottom: 1px solid rgba(255, 182, 193, 0.3);
+  border-radius: 12px;
+}
+
+/* Glowing Sakura buttons with float */
+.petal-button {
+  display: inline-block;
+  background-color: #f9d5e5;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(249, 213, 229, 0.5);
+  transition: all 0.3s ease-in-out;
+  animation: pulse 1.8s infinite, floatPetal 4s ease-in-out infinite;
+}
+
+.petal-button:hover {
+  background-color: #fbb6ce;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(249, 213, 229, 0.8);
+}
+
+/* Pulse glow animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(249, 213, 229, 0.6);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(249, 213, 229, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(249, 213, 229, 0.6);
+  }
+}
+
+/* Soft floating animation for buttons */
+@keyframes floatPetal {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+}
+
+/* 🌸 Falling emoji petals */
+.petal {
+  position: absolute;
+  top: -20px;
+  font-size: 1.5rem;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+}
+
+/* Fall animation for background petals */
+@keyframes fall {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110%) rotate(360deg);
+    opacity: 0;
+  }
+}

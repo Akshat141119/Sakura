@@ -1,0 +1,55 @@
+.sakura-whisper {
+  background: linear-gradient(135deg, #ffeaf4 0%, #e3f0ff 100%);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.whisper-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  resize: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 12px;
+  font-family: inherit;
+}
+
+.whisper-button {
+  background-color: #ff80ab;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.whisper-button:hover {
+  background-color: #ec407a;
+}
+
+.whisper-response {
+  margin-top: 16px;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #555;
+  animation: fadeIn 0.5s ease;
+}
+
+.loading {
+  color: #999;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

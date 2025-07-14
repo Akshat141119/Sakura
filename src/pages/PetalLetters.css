@@ -1,0 +1,136 @@
+.wall-container {
+  position: relative;
+  padding: 3rem 2rem;
+  min-height: 100vh;
+  background-color: #fff0f5;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* 🌸 Floating petals */
+.floating-petal {
+  position: absolute;
+  top: -30px;
+  font-size: 1.5rem;
+  animation: driftFall linear infinite;
+  pointer-events: none;
+}
+@keyframes driftFall {
+  0% { transform: translateY(-10%) rotate(0deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(120%) rotate(360deg); opacity: 0; }
+}
+
+/* ✨ Prompt */
+.wall-prompt {
+  font-size: 1.8rem;
+  color: #913f54;
+  margin-bottom: 2rem;
+  font-family: 'Georgia', serif;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* 📝 Form */
+.wall-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.wall-form textarea {
+  width: 80%;
+  max-width: 600px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid #e7b5c8;
+  font-size: 1rem;
+  padding: 0.8rem;
+  font-family: 'Georgia', serif;
+  resize: none;
+  box-shadow: 0 0 12px rgba(249, 213, 229, 0.3);
+}
+.wall-form button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #f9d5e5;
+  border: none;
+  color: #913f54;
+  font-family: 'Inter', sans-serif;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(249, 213, 229, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+.wall-form button:hover {
+  background-color: #fbb6ce;
+  box-shadow: 0 0 16px rgba(249, 213, 229, 0.6);
+}
+
+/* 💬 Message wall */
+.wall-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wall-card {
+  background-color: #ffe8f0;
+  padding: 1.2rem 1.6rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(249, 213, 229, 0.3);
+  width: 80%;
+  max-width: 600px;
+  animation: fadeIn 1s ease forwards;
+  font-family: 'Georgia', serif;
+  color: #913f54;
+}
+.wall-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+.wall-message {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.wall-meta {
+  font-size: 0.9rem;
+  color: #913f54;
+  opacity: 0.7;
+}
+
+/* 🧠 GPT whisper */
+.poet-whisper {
+  margin: 1rem auto;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  color: #725264;
+  background-color: #f7e7ee;
+  padding: 1rem;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(249, 213, 229, 0.3);
+}
+
+/* 🎨 Mood tinting */
+.wall-card.romantic {
+  border-left: 6px solid #fbb6ce;
+}
+.wall-card.thoughtful {
+  border-left: 6px solid #c3b6e7;
+}
+.wall-card.restless {
+  border-left: 6px solid #a6e7e1;
+}
+.wall-card.empathetic {
+  border-left: 6px solid #f3deb0;
+}
+
+/* ✨ Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}

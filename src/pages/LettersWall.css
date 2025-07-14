@@ -1,0 +1,158 @@
+.letter-wall {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Georgia", serif;
+  color: #692544;
+}
+
+.wall-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #b34c76;
+}
+
+.letter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: #fff0f6;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 190, 230, 0.2);
+  margin-bottom: 2rem;
+}
+
+.letter-form input,
+.letter-form textarea,
+.letter-form select {
+  padding: 0.8rem;
+  border: 1px solid #e3b5cc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  font-family: "Georgia", serif;
+  color: #5a2040;
+}
+
+.letter-form textarea {
+  resize: vertical;
+}
+
+.letter-form button {
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(to right, #ffc9dd, #ffb3d1);
+  border: none;
+  color: #4d0f28;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 180, 200, 0.3);
+  transition: background 0.3s ease;
+}
+
+.letter-form button:hover {
+  background: linear-gradient(to right, #ffaed1, #ff99bf);
+}
+
+.letter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+/* 🌟 Fade-in animation for each letter */
+.letter-item {
+  background: #fff6fc;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(255, 180, 220, 0.2);
+  opacity: 0;
+  transform: perspective(800px) rotateX(-20deg) scale(0.95);
+  transform-origin: top center;
+  animation: unfoldOrigami 0.8s ease forwards;
+}
+
+/* ✨ Origami-style unfolding transition */
+@keyframes unfoldOrigami {
+  0% {
+    opacity: 0;
+    transform: perspective(800px) rotateX(-20deg) scale(0.95);
+  }
+  50% {
+    opacity: 0.6;
+    transform: perspective(800px) rotateX(10deg) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(800px) rotateX(0deg) scale(1);
+  }
+}
+.letter-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(255, 180, 220, 0.3);
+}
+
+.letter-content {
+  font-size: 1.05rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: #5c2344;
+}
+
+.letter-meta {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  color: #823f60;
+}
+
+.emotion-tag {
+  font-style: italic;
+  color: #a55b85;
+}
+
+/* 🎭 Mood emoji prefix */
+.emotion-tag::before {
+  margin-right: 0.4rem;
+}
+
+.letter-item.joyful .emotion-tag::before {
+  content: "🌞";
+}
+
+.letter-item.nostalgic .emotion-tag::before {
+  content: "📜";
+}
+
+.letter-item.quiet .emotion-tag::before {
+  content: "🌙";
+}
+
+.letter-item.gentle .emotion-tag::before {
+  content: "🌸";
+}
+
+/* 💫 Mood border accents */
+.letter-item.joyful {
+  background: #fffce8;
+  border-left: 6px solid #fdd672;
+}
+
+.letter-item.nostalgic {
+  background: #f9f0ff;
+  border-left: 6px solid #d0a8ff;
+}
+
+.letter-item.quiet {
+  background: #eef7f9;
+  border-left: 6px solid #9acdd4;
+}
+
+.letter-item.gentle {
+  background: #fff5f9;
+  border-left: 6px solid #f6b8d2;
+}

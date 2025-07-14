@@ -1,0 +1,26 @@
+.letters-container {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255, 228, 225, 0.5); /* soft blossom tint */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(249, 213, 229, 0.3);
+}
+
+.quote {
+  opacity: 1 !important; /* Ensure visibility */
+  color: red;
+  transform: translateY(10px);
+  transition: opacity 1s ease, transform 1s ease;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #913f54;
+  font-weight: 500;
+  font-family: 'Georgia', serif;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

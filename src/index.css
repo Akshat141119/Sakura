@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: #fff0f5;
+  font-family: 'Arial', sans-serif;
+  background-image: url("/images/sakura_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
