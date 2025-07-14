@@ -1,6 +1,6 @@
 export async function getPoeticReflection(userPrompt, mood = "gentle") {
   try {
-    const response = await fetch("http://localhost:11434/api/generate", {
+    const response = await fetch("https://dull-crabs-hug.loca.lt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
